@@ -1,0 +1,107 @@
+.header {
+    background-color: DarkSeaGreen;
+    width: 100%;
+    height: 100px;/* Высота шапки */
+    padding: 0;
+
+}
+
+.footer {
+    background-color: Silver;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+}
+
+.nameOfGame{
+    float:left;
+    font-size:   28px;
+    font-weight: bold; /* то же самое что и 700 */
+    background: gray; /* Цвет фона под заголовком */
+    padding: 10px;/* Поля вокруг текста */
+    width: 200px;
+}
+
+.pageTitle{
+    font-size:   28px;
+    font-weight: bold; /* то же самое что и 700 */
+    padding: 20px;/* Поля вокруг текста */
+    margin-right: 5px;
+}
+
+.createdBy{
+    font-size:   20px;
+    padding: 20px;/* Поля вокруг текста */
+    margin-right: 5px;
+}
+h1 {
+    background: gray; /* Цвет фона под заголовком */
+    padding: 10px; /* Поля вокруг текста */
+    width: 10%;
+}
+h2 {
+    padding: 10px; /* Поля вокруг текста */
+}
+
+P {
+    line-height: 0.2em;
+}
+
+button:hover {
+    background-color: NavajoWhite;
+    transition: 0.1s;
+}
+
+button:active {
+    background-color: LightGray;
+    transition: 0s;
+}
+/*---------------------------------------------*/
+/*Мое радио*/
+
+.label {}
+
+.radio {
+    display: none;
+}
+
+.fake {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    position: relative;
+    border-radius: 50%;
+}
+
+.fake::before{
+    content:"";
+    position: absolute;
+    margin-top:  10px;
+    margin-left: 10px;
+    transform: translate(-50%,-50%);
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: LightSteelBlue;
+    opacity: 0;
+    transition: 0.1s;
+    border-radius: 50%;
+}
+
+.radio:checked + .fake:before {
+    opacity: 1;
+}
+
+.text {}
+/*------------------------*/
+/*Мой блок*/
+
+.myBlock{
+    outline: 2px solid RosyBrown; /* Чёрная рамка */
+    width: 200px;
+    padding-left: 10px;
+    padding-right: 0px;
+}

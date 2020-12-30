@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GameOfWords</title>
+  <style>
+      .b1 {
+          padding: 10px;
+          background-color: LightSalmon;
+          border-radius: 15px;
+          font-size: 18px;
+          width: 130px;
+      }
+      .b2 {
+          padding: 10px;
+          background-color: DarkSeaGreen;
+          border-radius: 15px;
+          font-size: 18px;
+          width: 130px;
+      }
+  </style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div class="header">
+  <div class="nameOfGame">
+    Игра в слова
+  </div>
+  <div align="right" class="pageTitle">
+    Игровая страница
+  </div>
+</div>
+
+</br>
+
+<div style="float: left" class="myBlocks">
+  <div style="width: 160px" class="myBlock">
+    <h3> Выбранная группа слов:</h3>
+
+    <p style = "padding: 10px">Города</p>
+  </div>
+
+  <div style="width: 160px" class="myBlock">
+    <h3> Выбранный режим:</h3>
+
+    <p style = "padding: 10px">Человек vs Человек</p>
+  </div>
+</div>
+
+
+<h2 style="margin-right: 10px" align="right"> Список использованных слов:</h2>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<p align="left">
+  <%= link_to "index" do %>
+    <button align="left" class="b1"> Вернуться на главную страницу </button>
+  <% end %>
+</p>
+
+<p align="left">
+  <%= link_to "pvp_city" do %>
+    <button align="left" class="b2"> Начать заново </button>
+  <% end %>
+</p>
+
+<div class="footer">
+  <div align="right" class="createdBy">
+    <p>Created by</p>
+    <p>Чернявый Станислав</p>
+    <p>Фоменко Николай</p>
+  </div>
+</div>
+
+</body>
+</html>

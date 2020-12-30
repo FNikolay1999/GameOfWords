@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GameOfWords</title>
+  <style>
+      .b1 {
+          padding: 10px;
+          background-color: LightSalmon;
+          border-radius: 15px;
+          font-size: 18px;
+          width: 130px;
+      }
+      .b2 {
+          padding: 10px;
+          background-color: DarkSeaGreen;
+          border-radius: 15px;
+          font-size: 18px;
+          width: 130px;
+      }
+      .b3 {
+          padding: 10px;
+          background-color: LightSteelBlue;
+          border-radius: 15px;
+          font-size: 18px;
+          width: 130px;
+      }
+      textarea {
+          width: 300px; /* Ширина поля в процентах */
+          height: 200px; /* Высота поля в пикселах */
+          resize: none; /* Запрещаем изменять размер */
+      }
+  </style>
+  <script>
+      let flag_new;
+      let words;
+      let old_words;
+      function getData() {
+          var quantity = document.getElementById("quantity").value;
+          console.log(quantity);
+          document.getElementById("quantity").value="";
+      }
+  </script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div class="header">
+  <div class="nameOfGame">
+    Игра в слова
+  </div>
+  <div align="right" class="pageTitle">
+    Игровая страница
+  </div>
+</div>
+
+</br>
+
+<div style="float: left" class="myBlocks">
+  <div style="width: 160px" class="myBlock">
+    <h3> Выбранная группа слов:</h3>
+
+    <p style = "padding: 10px">Города</p>
+  </div>
+
+  <div style="width: 160px" class="myBlock">
+    <h3> Выбранный режим:</h3>
+
+    <p style = "padding: 10px">Человек vs Человек</p>
+  </div>
+</div>
+
+</br>
+
+</br>
+</br>
+
+
+
+
+<p style="margin-left: 35%"><b>Впишите слово:</b>
+  <input type="text" name=textField id="quantity" size="40">
+</p>
+
+<p align="center">
+  <button align="center"  style="margin-right: 200px" class="b3" onClick="getData()"> Подтвердить </button>
+</p>
+
+
+
+<form action="handler.php">
+  <p style="font-size: 20px; margin-right: 50px" align="right"><b>Список использованных слов:</b></p>
+  <p align="right" style="float: right; margin-right: 20px"><textarea name="comment" readonly></textarea></p>
+</form>
+
+
+</br>
+
+
+<p align="left">
+  <%= link_to "index" do %>
+    <button align="left" class="b1"> Вернуться на главную страницу </button>
+  <% end %>
+</p>
+
+<p align="left">
+  <%= link_to "pvp_city" do %>
+    <button align="left" class="b2"> Начать заново </button>
+  <% end %>
+</p>
+
+<div class="footer">
+  <div align="right" class="createdBy">
+    <p>Created by</p>
+    <p>Чернявый Станислав</p>
+    <p>Фоменко Николай</p>
+  </div>
+</div>
+
+</body>
+</html>

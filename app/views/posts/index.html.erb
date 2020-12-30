@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GameOfWords</title>
+  <style>
+      .b1 {
+          padding: 30px;
+          background-color: BurlyWood;
+          border-radius: 15px;
+          font-size: 25px;
+      }
+  </style>
+  <script>
+      function checkType() {
+          getCheckedRadioValue('name1','name2');
+      }
+      function getCheckedRadioValue(name1,name2) {
+          let myGroup = document.getElementsByName(name1);
+          let myMode = document.getElementsByName(name2);
+          let flag = false
+          for (let i=0, len1=myGroup.length; i<len1; i++){
+              if (flag)
+                  break;
+              for (let j=0, len2=myMode.length; j<len2; j++)
+                  if(myGroup[i].checked && myMode[j].checked){
+                      if(myGroup[i].value == "city"){
+                          if(myMode[j].value == "pve"){
+                              document.location.href = "pve_city";
+                              flag = true;
+                              break;
+                          }
+                          else if(myMode[j].value == "pvp"){
+                              document.location.href = "pvp_city";
+                              flag = true;
+                              break;
+                          }
+                      }
+                      else if(myGroup[i].value == "names"){
+                          if(myMode[j].value == "pve"){
+                              document.location.href = "pve_name";
+                              flag = true;
+                              break;
+                          }
+                          else if(myMode[j].value == "pvp"){
+                              document.location.href = "pvp_name";
+                              flag = true;
+                              break;
+                          }
+                      }
+                      else if(myGroup[i].value == "nouns"){
+                          if(myMode[j].value == "pve"){
+                              document.location.href = "pve_noun";
+                              flag = true;
+                              break;
+                          }
+                          else if(myMode[j].value == "pvp"){
+                              document.location.href = "pvp_noun"
+                              flag = true;
+                              break;
+                          }
+                      }
+                  }
+          }
+      }
+
+  </script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div class="header">
+  <div class="nameOfGame">
+    Игра в слова
+  </div>
+  <div align="right" class="pageTitle">
+    Главная страница
+  </div>
+</div>
+
+</br>
+
+
+<div class="myBlock">
+  <h3> Группа слов:</h3>
+
+  <label class="label">
+    <input type="radio" class="radio" name="name1" value="city">
+    <span class="fake"></span>
+    <span class="text">Города</span>
+  </label>
+
+  </br>
+
+  <label class="label">
+    <input type="radio" class="radio" name="name1" value="names">
+    <span class="fake"></span>
+    <span class="text">Имена людей</span>
+  </label>
+
+  </br>
+
+  <label class="label">
+    <input type="radio" class="radio" name="name1" value="nouns">
+    <span class="fake"></span>
+    <span class="text">Имена существительные</span>
+  </label>
+</div>
+
+<div class="myBlock">
+  <h3> Режимы:</h3>
+
+  <label class="label">
+    <input type="radio" class="radio" name="name2" value="pve">
+    <span class="fake"></span>
+    <span class="text">Человек vs Компьютер</span>
+  </label>
+
+  </br>
+
+  <label class="label">
+    <input type="radio" class="radio" name="name2"  value="pvp">
+    <span class="fake"></span>
+    <span class="text">Человек vs Человек</span>
+  </label>
+</div>
+
+<p align="center">
+    <button id="to_play" onclick="checkType()" class="b1" > Играть! </button>
+</p>
+
+<div class="footer">
+  <div align="right" class="createdBy">
+    <p>Created by</p>
+    <p>Чернявый Станислав</p>
+    <p>Фоменко Николай</p>
+  </div>
+</div>
+
+</body>
+</html>
